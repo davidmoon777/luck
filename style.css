@@ -28,9 +28,7 @@ button {
     color: white;
 }
 
-.hidden {
-    display: none;
-}
+.hidden { display: none; }
 
 header {
     position: absolute;
@@ -39,16 +37,27 @@ header {
     font-size: 16px;
 }
 
-#user-info span {
-    display: block;
+#user-info span, #user-info button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#menu { margin-top: 20px; }
+
+#game-area {
+    margin-top: 20px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    min-height: 200px;
 }
 
 .popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     background: rgba(0,0,0,0.8);
 }
 
@@ -60,14 +69,25 @@ header {
     border-radius: 10px;
 }
 
-#menu {
-    margin-top: 20px;
+/* 뉴스 피드 */
+.news-feed {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
 }
 
-#game-area {
-    margin-top: 20px;
-    padding: 20px;
-    background: #222;
-    border-radius: 10px;
-    min-height: 200px;
+.news-feed span {
+    display: inline-block;
+    margin-right: 50px;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
